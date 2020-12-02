@@ -1,0 +1,166 @@
+Class
+
+public class Main1 {
+int a=10;
+void show() {
+System.out.println("hello");
+}
+}
+class main3{
+	public static void main(String args[])
+	{
+	Main1 obj1=new Main1();
+	System.out.println(obj1.a);
+	obj1.show();
+	
+	
+	
+	}
+}
+
+-----------------------------------------------------------------------------------------------
+
+ABSTRACT CLASS
+
+abstract class washing_machine{
+	
+	abstract void start_motor();
+	void show()
+	{
+		System.out.println("Washing Machine is showing");
+	}
+	
+}
+class run extends washing_machine{
+	
+	public void start_motor()
+	{
+		System.out.println("motor started");
+	}
+}
+
+
+public class home {
+public static void main(String args[])
+{
+	run obj1=new run();
+	obj1.start_motor();
+	obj1.show();
+}
+}
+
+--------------------------------------------------------------------------------------
+
+PRIVATE & FINAL EXAMPLE
+
+class address{
+	private int strtno=10;
+	private String name="raj";
+	public int phone =6011;
+	void show()
+	{
+		System.out.println(strtno);
+		System.out.println(name);
+		System.out.println(phone);
+	}
+}
+public class Privateexample {
+
+public static void main(String args[])
+{
+final int  a=30;
+address obj1=new address();
+obj1.show();
+System.out.println(a);
+}
+}
+
+----------------------------------------------------------------------------
+
+CLASS VARIABLE
+
+
+public class Classvariable {
+static int a=10;
+static int b=20;
+int inst;
+static void show()
+{
+	System.out.println(a);
+	
+}
+public static void main(String args[])
+{
+	show();
+	Classvariable obj1=new Classvariable();
+	System.out.println(b);
+	obj1.inst=30;
+	System.out.println(obj1.inst);
+	Classvariable obj2=new Classvariable();
+	obj2.inst=40;
+	System.out.println(obj2.inst);
+}
+}
+
+---------------------------------------------------------------------
+
+PROTECTED EXAMPLE
+
+class abc{
+	protected int a=10;
+	protected int b=20;
+}
+class def extends abc{
+	int c=30;
+	abc obj1=new abc();
+	void show()
+	{
+		System.out.println(obj1.a);
+		System.out.println(obj1.b);
+	}
+	
+		
+}
+public class Protected_example {
+
+public static void main(String args[])
+{
+System.out.println("Example of protected class");
+def obj2=new def();
+obj2.show();
+
+
+}
+}
+
+--------------------------------------------------------------------------
+INTERFACE
+
+interface Employee {
+public void clockin();
+public void clockout();
+public void work();
+}
+class person implements Employee
+{
+	public void clockin()
+	{
+		System.out.println("clocking in");
+	}
+	public void clockout()
+	{
+		System.out.println("clocking out");
+	}
+	public void work()
+	{
+		System.out.println("working");
+	}
+	public static void main (String args [])
+	{
+		person obj = new person ();
+		obj.clockin();
+		obj.clockout();
+		obj.work();
+	}
+
+}
